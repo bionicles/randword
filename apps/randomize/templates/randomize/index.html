@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Random Word Generator</title>
+  </head>
+
+  <style>
+    *{text-align: center;
+      font-family: monospace;}
+  </style>
+
+  <body>
+
+
+    <h1>Random Word (attempt #{{counter}})</h1>
+
+
+    <form action='/generate' method='post'>
+      {% csrf_token %}
+      <h2>{{word}}</h2>
+      <input type="submit" value="generate">
+
+    </form>
+  </body>
+</html>
